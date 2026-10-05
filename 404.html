@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sayfa bulunamadı | Kuçar Mobilya</title>
+  <meta name="description" content="Aradığınız sayfa bulunamadı. Kuçar Mobilya ana sayfa veya ürünlere gidin.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f8f8f6">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="404">
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header class="site-header is-solid" data-header>
+    <div class="header-top">
+      <div class="topbar">
+        <span>Masko Mobilya Kenti · 13A Blok No: 7</span>
+        <div class="topbar-end">
+          <a href="tel:+902126752619">0212 675 26 19</a>
+        </div>
+      </div>
+      <a class="logo" href="index.html">
+        <img class="brand" src="img/logo.svg" alt="Kuçar" width="1200" height="505">
+      </a>
+    </div>
+  </header>
+  <main id="icerik">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">404</p>
+        <h1>Bu sayfa bulunamadı.</h1>
+        <p class="lede">Bağlantı eski veya yanlış olabilir. Ana sayfadan veya ürünlerden devam edebilirsiniz.</p>
+        <div class="btn-row">
+          <a class="btn" href="index.html">Ana sayfa</a>
+          <a class="btn btn-ghost" href="koleksiyonlar.html">Ürünler</a>
+          <a class="btn btn-ghost" href="iletisim.html">İletişim</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap legal">
+      <span>© <span data-year-num>2026</span> Kuçar Mobilya San. ve Tic. Ltd. Şti.</span>
+      <span>İkitelli, Başakşehir</span>
+    </div>
+  </footer>
+  <script>
+    document.querySelectorAll("[data-year-num]").forEach(function (el) {
+      el.textContent = String(new Date().getFullYear());
+    });
+  </script>
+</body>
+</html>
