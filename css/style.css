@@ -382,23 +382,39 @@ body[data-page="home"] .hero {
   overflow: clip;
   border-bottom: 0;
 }
-body[data-page="home"] .hero-panel,
-body[data-page="home"] .hero-shot {
+body[data-page="home"] .hero-panel {
   position: absolute;
   inset: 0;
+  z-index: 0;
   min-height: 100%;
+  background: #121110;
 }
-body[data-page="home"] .hero-shot img {
+body[data-page="home"] .hero-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 10, 10, 0.62) 0%, rgba(10, 10, 10, 0.18) 42%, rgba(10, 10, 10, 0) 68%);
+  pointer-events: none;
+}
+body[data-page="home"] .hero-reel {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 100%;
+  margin: 0;
+}
+body[data-page="home"] .hero-reel video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center 46%;
+  object-position: center center;
 }
 body[data-page="home"] .hero-copy {
   position: relative;
-  z-index: 1;
-  max-width: 460px;
+  z-index: 2;
+  max-width: min(560px, 42vw);
   margin: 0 0 72px 6vw;
   padding: 0;
   background: none;
@@ -408,6 +424,8 @@ body[data-page="home"] .hero-copy .eyebrow { color: #e4c98a; }
 body[data-page="home"] .hero-copy h1 {
   color: #f0e0c0;
   text-shadow: 0 2px 22px rgba(0, 0, 0, 0.35);
+  font-size: clamp(36px, 4.2vw, 58px);
+  max-width: 11em;
 }
 body[data-page="home"] .hero-copy h1 em { color: #e4e7eb; }
 body[data-page="home"] .hero-copy .lede {
@@ -518,6 +536,59 @@ body[data-page="home"] .hero-shot figcaption { display: none; }
 .rail a:hover { color: var(--ink); background: var(--bg-2); }
 
 .section { padding: 96px 0; }
+.home-film { padding-top: 0; }
+.film-frame {
+  position: relative;
+  width: min(820px, 100%);
+  margin-inline: auto;
+  aspect-ratio: 4 / 3;
+  background: #121110;
+}
+.film-frame video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #121110;
+}
+.store-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 22px;
+  align-items: start;
+}
+.store-card { margin: 0; }
+.store-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background: var(--bg);
+}
+.store-card img.is-2006 { object-position: center 42%; }
+.store-card img.is-2015 { object-position: center 28%; }
+.store-card img.is-2023 { object-position: center 48%; }
+.store-card figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 14px;
+}
+.store-card b {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+}
+.store-card span {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
 .section-head {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1149,6 +1220,14 @@ input:focus, textarea:focus, select:focus { border-color: var(--gold); }
   font-size: 12px;
   color: #8d8a84;
 }
+.design-by {
+  margin: 22px 0 0;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+}
+.design-by a { color: #8d8a84; }
+.site-footer .design-by a:hover { color: #e7d3ae; }
 
 .to-top {
   position: fixed;
@@ -1298,6 +1377,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--gold); }
     grid-template-columns: 1fr;
   }
   .materials, .steps, .stats, .catalog { grid-template-columns: 1fr 1fr; }
+  body[data-page="home"] .hero-copy { max-width: none; margin: 0 24px 36px; }
   .story { gap: 8px; }
   .step { border-right: 0; border-bottom: 1px solid var(--line); }
   .nav-toggle { display: block; }
@@ -1379,7 +1459,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--gold); }
   .brand { width: 136px; }
   .hero-copy { padding: 48px 24px 40px; }
   .hero-panel { padding: 0; }
-  .materials, .steps, .stats, .catalog { grid-template-columns: 1fr; }
+  .materials, .steps, .stats, .catalog, .store-grid { grid-template-columns: 1fr; }
   .topbar { justify-content: flex-start; padding-right: 52px; }
   .topbar > span { display: none; }
   .topbar > span,
@@ -1394,6 +1474,7 @@ input:focus, textarea:focus, select:focus { border-color: var(--gold); }
     margin: 0 20px 36px;
     padding: 0;
   }
+  body[data-page="home"] .hero-copy h1 { font-size: 34px; }
   .project-feature { min-height: 78vh; }
   .project-feature-copy { padding: calc(var(--header-bottom, 130px) + 28px) 20px 40px; }
   .section { padding: 64px 0; }

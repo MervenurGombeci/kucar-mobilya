@@ -43,7 +43,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500&family=Manrope:wght@300;400;500&display=swap&subset=cyrillic,latin" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body data-page="home">
   <a class="skip" href="#icerik" data-i18n="skip">İçeriğe geç</a>
@@ -119,18 +119,17 @@
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow" data-i18n="home.kicker">Masko · İstanbul · 1994</p>
-        <h1 data-i18n="home.h1" data-i18n-html>Altının sakinliği,<br><em>gümüşün netliği.</em></h1>
-        <p class="lede" data-i18n="home.lede">Paslanmaz çelik masa, sandalye ve yemek odası. Titanyum gold, gümüş ve rose yüzeyler. Showroom’da görüp, ölçüye göre sipariş edersiniz.</p>
+        <h1 data-i18n="home.h1" data-i18n-html>Paslanmaz Çelik,<br>Metal ve Pirinç<br>Mobilyalar...</h1>
+        <p class="lede" data-i18n="home.lede">1994'den beri Ev, Ofis, Restoran, Villa ve Otel projelerinizdeki metal mobilyalarda çözüm ortağınız.</p>
         <div class="btn-row">
           <a class="btn" href="iletisim.html" data-i18n="home.cta">Bize ulaşın</a>
           <a class="btn btn-ghost" href="koleksiyonlar.html" data-i18n="nav.collection">Ürünler</a>
         </div>
       </div>
       <div class="hero-panel">
-        <figure class="hero-shot">
-          <img src="img/hero-masa.jpg" alt="Luxury yemek odası takımı, geniş showroom" width="1280" height="720" fetchpriority="high" decoding="async">
-          <figcaption>Luxury Yemek Odası Takımı</figcaption>
-        </figure>
+        <div class="hero-reel">
+          <video src="video/kucar-reel.mp4?v=3" autoplay muted loop playsinline title="Kuçar Mobilya"></video>
+        </div>
       </div>
     </section>
 
@@ -153,36 +152,52 @@
       </div>
     </section>
 
-    <section class="section" style="padding-top:0">
+    <section class="section home-film">
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="eyebrow" data-i18n="home.order.k">Butik hizmet</p>
-            <h2 data-i18n="home.order.h">Dört adım.</h2>
+            <p class="eyebrow" data-i18n="home.film.k">Video</p>
+            <h2 data-i18n="home.film.h">10 yıl önce Kuçar Mobilya</h2>
           </div>
-          <p data-i18n="home.order.p">Keşif, seçim ve üretim aynı masada konuşulur. Ürünü showroom’da, gün ışığında görürsünüz.</p>
         </div>
-        <div class="steps">
-          <article class="step">
-            <span data-i18n="home.s1">01 — Showroom</span>
-            <h3 data-i18n="home.s1.h">Masko’da bakın</h3>
-            <p data-i18n="home.s1.p">13A blokta masa, sandalye ve takımları yan yana görürsünüz. Randevu ile gelmek daha rahat.</p>
-          </article>
-          <article class="step">
-            <span data-i18n="home.s2">02 — Ölçü</span>
-            <h3 data-i18n="home.s2.h">Mekân ölçülür</h3>
-            <p data-i18n="home.s2.p">Proje işlerinde masa boyu, sandalye adedi ve geçiş boşluğu yerinde alınır.</p>
-          </article>
-          <article class="step">
-            <span data-i18n="home.s3">03 — Yüzey</span>
-            <h3 data-i18n="home.s3.h">Ton seçilir</h3>
-            <p data-i18n="home.s3.p">Gold, gümüş veya rose. Mermer damarı ve ayak bitişi bu aşamada netleşir.</p>
-          </article>
-          <article class="step">
-            <span data-i18n="home.s4">04 — Üretim</span>
-            <h3 data-i18n="home.s4.h">Sipariş çıkar</h3>
-            <p data-i18n="home.s4.p">Perakende parça da olur, otel, düğün salonu ve proje grubu da. Teslimat ayrıca konuşulur.</p>
-          </article>
+        <div class="film-frame">
+          <video
+            src="video/kucar-10-yil.mp4"
+            controls
+            playsinline
+            preload="metadata"
+            title="10 yıl önce Kuçar Mobilya"
+            data-i18n="home.film.h"
+            data-i18n-attr="title"></video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section home-stores">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="home.stores.k">Mağazalar</p>
+            <h2 data-i18n="home.stores.h">Masko’daki dört mağaza.</h2>
+          </div>
+        </div>
+        <div class="store-grid">
+          <figure class="store-card">
+            <img class="is-2006" src="img/magaza/magaza-2006.jpg?v=3" alt="Kuçar Masko 1. mağaza, 2006" width="843" height="1024" loading="lazy" decoding="async">
+            <figcaption><b>2006</b><span data-i18n="home.store1">Masko 1. Mağaza</span></figcaption>
+          </figure>
+          <figure class="store-card">
+            <img class="is-2015" src="img/magaza/magaza-2015.jpg?v=3" alt="Kuçar Masko 2. mağaza, 2015" width="864" height="1152" loading="lazy" decoding="async">
+            <figcaption><b>2015</b><span data-i18n="home.store2">Masko 2. Mağaza</span></figcaption>
+          </figure>
+          <figure class="store-card">
+            <img class="is-2019" src="img/magaza/magaza-2019.jpg?v=3" alt="Kuçar Masko 3. mağaza, 2019" width="1152" height="864" loading="lazy" decoding="async">
+            <figcaption><b>2019</b><span data-i18n="home.store3">Masko 3. Mağaza</span></figcaption>
+          </figure>
+          <figure class="store-card">
+            <img class="is-2023" src="img/magaza/magaza-2023.jpg?v=3" alt="Kuçar Masko 4. mağaza, 2023" width="768" height="1024" loading="lazy" decoding="async">
+            <figcaption><b>2023</b><span data-i18n="home.store4">Masko 4. Mağaza</span></figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -201,7 +216,6 @@
             <p class="eyebrow" data-i18n="prj.k">Projeler</p>
             <h2 data-i18n="prj.h">Villa, otel, düğün salonu.</h2>
           </div>
-          <p data-i18n="prj.p">Kuçar’ın yerinde kurduğu işler. Fotoğrafa basınca tüm çekimler açılır.</p>
         </div>
         <div class="catalog" data-projects data-projects-limit="6"></div>
         <noscript>
@@ -220,7 +234,7 @@
           <h2 data-i18n="home.phone.h">Kuçar kalitesi bir telefon uzağınızda.</h2>
         </div>
         <div class="phone-cta-actions">
-          <a class="btn" href="tel:+902126752619">0212 675 26 19</a>
+          <a class="btn" href="tel:+905330922973">+90 533 092 29 73</a>
           <a class="btn btn-ghost" href="https://wa.me/905330922973" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
@@ -353,6 +367,7 @@
       <span>© <span data-year-num>2026</span> Kuçar Mobilya San. ve Tic. Ltd. Şti.</span>
       <span data-i18n="foot.place">İkitelli, Başakşehir</span>
     </div>
+    <p class="design-by"><a href="https://www.linkedin.com/in/mervenur-g%C3%B6mbeci-4741422a5" target="_blank" rel="noopener noreferrer">Design by Mervenur Gömbeci</a></p>
   </footer>
 
   <button class="to-top" type="button" data-to-top data-i18n="toTop" data-i18n-attr="aria-label" aria-label="Yukarı çık"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 14.5 12 8.5 18 14.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -407,7 +422,7 @@
   <script src="js/catalog.js" defer></script>
   <script src="js/catalog-extra.js" defer></script>
   <script src="js/projects.js" defer></script>
-  <script src="js/i18n.js" defer></script>
+  <script src="js/i18n.js?v=2" defer></script>
   <script src="js/ig-feed-data.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
